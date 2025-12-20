@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = [
+            {
+                name: "Alice Johnson",
+                email: "alice@example.com",
+                pass: "alice123"
+            },
+            {
+                name: "Bob Smith",
+                email: "bob@example.com",
+                pass: "bob456"
+            },
+            {
+                name: "Charlie Brown",
+                email: "charlie@example.com",
+                pass: "charlie789"
+            }
+        ];
+
+        const getData = ()=>{
+            const email = prompt("Enter your email");
+            const c_u = users.find((e, i)=> e.email == email);
+            if (c_u){
+                return c_u;
+            }
+            else{
+                return "Invalid Email";
+            }
+        }
+        // console.log(getData()); 
+
+        const data = {
+            name : "abc",
+            email : "abc@gmail.com"
+        };
+        // const name = data.name;
+        // const email = data.name;
+        // const {name , email } = data;
+        const stu_arr = ["bac", 'abc', 'knc'];
+        // const stu1 = stu_arr[0]
+        const [s1, s2, s3] = stu_arr;
+    </script>
+</body>
+
+</html> 
