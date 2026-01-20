@@ -1,46 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-
-     <!--attributes forms - action="#" method="post" -->
+<fieldset>
+    <legend>User personal information</legend>
     <form>
-        <input type="file" placeholder="Enter your name">
-        <br>
-        <input type="password" placeholder="Enter your email">
-        <br>
-        <input type="password" placeholder="Enter your email">
-        <br>
-        <input type="email" placeholder="Enter your email">
-        
-        <br>
-        <input type="checkbox">
-        <input type="color">
-        <input type="date">
-        <input type="datetime-local">
-        <input type="month">
-        Male 
-        <input type="radio" name="g">
-        Female 
-        <input type="radio" name="g">
-
-        <input type="time">
-        <input type="week">
-
-        <select>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-            <option>Option 4</option>
-        </select>
-
-        <textarea></textarea>
-
-        <button>Submit</button>
+        <table>
+            <tr>
+                <td><label for="username">UserName</label></td>
+                <td><input type="text" required maxlength="12" minlength="3" id="username"
+                    value="Rahul Kumar"></td>
+            </tr>
+            <br>
+            <tr>
+                <td><label for="username">Email</label></td>
+                <td><input type="email" id="username"></td>
+            </tr>
+            <br>
+            
+            <label for="">Upload Pic</label>
+            <input type="file" accept=".jpg, .png">
+            <label for="">Phone</label>
+            <input type="number" placeholder="Enter your phone Number">
+            <select>
+                <option>Please Select</option>
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Agara</option>
+            </select>
+            <textarea></textarea>
+            <button>Submit</button>
+        </table>
     </form>
+</fieldset>
+    <!--attributes forms - action="#" method="post" -->
+    <!-- <fieldset>
+        <legend>Headings </legend>
+        <form>
+
+            <input type="file" placeholder="Enter your name">
+            <br>
+            <input type="password" placeholder="Enter your email">
+            <br>
+            <input type="password" placeholder="Enter your email">
+            <br>
+            <input type="email" placeholder="Enter your email">
+            <br>
+            <input type="checkbox">
+            <input type="color">
+            <input type="date">
+            <input type="datetime-local">
+            <input type="month">
+            Male
+            <input type="radio" name="g">
+            Female
+            <input type="radio" name="g">
+            <input type="time">
+            <input type="week">
+            <select>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+                <option>Option 4</option>
+            </select>
+            <textarea></textarea>
+            <button>Submit</button>
+        </form>
+    </fieldset> -->
 </body>
+
 </html>

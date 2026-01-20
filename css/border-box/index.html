@@ -1,47 +1,52 @@
 <html>
-    <head>
-        <title></title>
-        <style>
-            h1{
-                margin: 10px;
-                padding: 10px;
-                background-color: yellow;
-                border: 10px solid green;
-            }
 
-            /* rem, em, %, vw, vh,  px*/
-            .green-btn{
-                padding: 10px 20px;
-                /* width: 4rem; */
-                border: 1px solid black;
-            }
-            .green-btn:hover{
-                background-color: black;
-                color: white;
-            }
+<head>
+    <title></title>
+    <style>
+        h1 {
+            margin: 10px;
+            padding: 10px;
+            background-color: yellow;
+            border: 10px solid green;
+        }
 
-            input{
-                outline: none;
-            }
+        /* rem = 16px
+        em = 16px
+        % - 
+        vw - view port width
+        vh - view port height 
+        */
+        .green-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            width: 4rem;
+            border: none;
+        }
+        .green-btn:hover{
+            background-color: darkgreen;
+        }
 
-            input:focus{
-                border: 1px solid blue;
-            }
-            h1{
-                
-            }
-        </style>
-    </head>
-    <body>
-        <button class="green-btn">Sign Up</button>
+        input:focus{
+            border: 1px solid blue;
+            outline: blue;
+        }
 
-        <div class="b">
-            <h1>Heading One</h1>
+    </style>
+    
+</head>
 
-        </div>
-        <div style="width: 400px;
+<body>
+    <button class="green-btn">Sign Up</button>
+
+    <div class="b">
+        <h1>Heading One</h1>
+
+    </div>
+    <div style="width: 400px;
         background-color: yellow;">
-            <input type="text" style="width: 90%;">
-        </div>
-    </body>
+        <input type="text" style="width: 90%;">
+    </div>
+</body>
+
 </html>
