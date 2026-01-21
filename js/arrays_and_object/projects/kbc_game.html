@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="root">
+        <div id="que"></div>
+        <div id="opt"></div>
+        <div id="isCorrect"></div>
+    </div>
+
+    <button onclick="nextQue()">Next Question</button>
+    <script>    
+        const arr = [
+        {
+            que: "Which planet is known as the Red Planet?",
+            options: { a: "Mars", b: "Venus", c: "Jupiter", d: "Saturn" },
+            correctAns: "a"
+        },
+        {
+            que: "Who wrote the play 'Romeo and Juliet'?",
+            options: { a: "Charles Dickens", b: "William Shakespeare", c: "Jane Austen", d: "Mark Twain" },
+            correctAns: "b"
+        },
+        {
+            que: "What is the capital city of Australia?",
+            options: { a: "Sydney", b: "Melbourne", c: "Canberra", d: "Perth" },
+            correctAns: "c"
+        },
+        {
+            que: "Which element has the chemical symbol 'O'?",
+            options: { a: "Osmium", b: "Oxygen", c: "Gold", d: "Iron" },
+            correctAns: "b"
+        },
+        {
+            que: "Who is known as the Father of Computers?",
+            options: { a: "Charles Babbage", b: "Alan Turing", c: "Bill Gates", d: "Steve Jobs" },
+            correctAns: "a"
+        },
+        {
+            que: "Which is the largest mammal in the world?",
+            options: { a: "Elephant", b: "Blue Whale", c: "Giraffe", d: "Hippopotamus" },
+            correctAns: "b"
+        }
+    ];
+
+    let i = 0;
+    const showData =() =>{
+        let data = arr[i];
+             document.getElementById('isCorrect').innerHTML = "";
+        document.getElementById('que').innerHTML = data.que;
+        document.getElementById("opt").innerHTML = `
+        <button onclick='checkAns("a")'> A. ${data.options.a} </button >
+        <button onclick='checkAns("b")'> B. ${data.options.b} </button >
+        <button onclick='checkAns("c")'> C. ${data.options.c} </button >
+        <button onclick='checkAns("d")'> D. ${data.options.d} </button >
+        `;
+        
+    }
+
+    const nextQue = ()=>{
+        if (i >= arr.length){
+            return;
+        }
+        i++;
+        showData();
+    }
+
+    const checkAns = (ans)=>{
+        const data = arr[i];
+        if (data.correctAns == ans){
+            document.getElementById('isCorrect').innerHTML = "Correct Ans";
+        }
+        else{
+            document.getElementById('isCorrect').innerHTML = "InCorrect Ans";
+        }
+    }  
+
+    showData();
+
+</script>
+</body>
+
+</html>
