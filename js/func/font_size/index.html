@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sint iure inventore assumenda, explicabo quos consectetur amet molestias placeat. Aperiam fugit repudiandae reiciendis animi pariatur est quidem. Soluta, ex neque?</p>
+        <button onclick="increaseFont()">Increase Font</button>
+        <button onclick="decreaseFont()">Decrease Font</button>
+        <script>
+            let i = 16
+            function increaseFont (){
+                i++;
+                document.getElementById('para').style.fontSize = `${i}px`;
+            }
+            
+            function decreaseFont (){
+                i--;
+                document.getElementById('para').style.fontSize = `${i}px`;
+            }
+        </script>
+    </body>
+</html>
