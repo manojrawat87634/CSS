@@ -1,134 +1,70 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <style>
-        * {
-            font-family: monospace;
+
+        *{
             margin: 0;
             padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
-
-        .container {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            box-shadow: 0 0 10px black;
+        .container{
             padding: 20px;
+            box-shadow: 0 0 10px black;
+            display: flex;
+            font-weight: 700;
+            font-size: 17px;
+            color: rgb(73, 73, 73);
+            gap: 20px;
+            align-items: center;
         }
 
-        .join {
-            border: 2px solid green;
-            color: white;
-            border-radius: 4px;
-            padding: 6px 12px 6px 12px;
-            color: green;
-            font-weight: 900;
+        .container img{
+            height: 30px;
+            margin-right: auto;
+        }
+
+        .join-btn{
+            border: 1px solid black;
             background-color: white;
-        }
-
-        .menu-item {
-            font-weight: bolder;
-            font-size: 15px;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .menu-item:hover {
-            color: green;
-        }
-
-        .join:hover {
-            background-color: green;
-            color: white;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bolder;
-        }
-
-
-        .banner-container {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            position: relative;
-        }
-
-        .banner-img {
-            width: 95vw;
-            height: 80vh;
-        }
-
-        .text-content {
-            font-size: 30px;
-            position: absolute;
-            left: 5vw;
-            color: white;
-            top: 20vh;
+            border-radius: 4px;
             font-weight: 700;
-        }
-
-        .search {
-            width: 45vw;
-            height: 4rem;
-            border-radius: 8px;
-            outline: none;
-            border: none;
-            padding-left: 8px;
-            font-size: 18px;
-            font-weight: 700;
-        }
-
-        .trusted-by{
-            display: flex;
-            /* justify-content: center; */
-            align-items: center;
-            /* justify-content: space-between; */
-            gap: 40px;
+            font-size: 17px;
+            padding: 10px 20px;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div style="margin-right: auto;" class="logo">Fiverr <span
-                style="display: inline-block; height: 4px; width: 4px; background-color: green; border-radius: 50%;"></span>
-        </div>
-        <div class="fiver-pro"> Fiverr Pro</div>
-        <div class="menu-item">Explore</div>
-        <div class="menu-item"><i class="fa-solid fa-globe"></i> English</div>
-        <div class="menu-item">Become a Seller</div>
-        <div class="menu-item">Sign In</div>
-        <div><button class="join">Join</button></div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_umGFq06yTUm5tl7vVH7jwgvd3egZdoEwQ&s" alt="">
+        <div>Fiverr Pro <i class="fa-solid fa-angle-down"></i></div>
+        <div>Explore <i class="fa-solid fa-angle-down"></i></div>
+        <div>EN <i class="fa-solid fa-globe"></i></div>
+        <div>Become a Seller</div>
+        <div>Sign In</div>
+        <div><button class="join-btn">Join</button></div>
     </div>
-
-
-
     <div class="container">
-        <i class="fa-solid fa-bars"></i>
-        <div style="margin-right: auto;" class="logo">Fiverr <span
-                style="display: inline-block; height: 4px; width: 4px; background-color: green; border-radius: 50%;"></span>
-        </div>
-        <div class="fiver-pro"> Fiverr Pro</div>
-        <div class="menu-item">Explore</div>
-        <div class="menu-item">Become a Seller</div>
-        <div class="menu-item">Sign In</div>
-        <div><button class="join">Join</button></div>
+        <div><i class="fa-bars fa-solid " style="font-weight: 800; font-size: 21px;"></i></div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_umGFq06yTUm5tl7vVH7jwgvd3egZdoEwQ&s" alt="">
+        <div>Fiverr Pro <i class="fa-solid fa-angle-down"></i></div>
+        <div>Explore <i class="fa-solid fa-angle-down"></i></div>
+        <div>Become a Seller</div>
+        <div>Sign In</div>
+        <div><button class="join-btn">Join</button></div>
     </div>
-
-
     <div class="container">
-            <i class="fa-solid fa-bars"></i>
-        <div style="margin: auto;" class="logo">Fiverr <span
-                style="display: inline-block; height: 4px; width: 4px; background-color: green; border-radius: 50%;"></span>
-        </div>
-        <div><button class="join">Join</button></div>
+        <div><i class="fa-bars fa-solid " style="font-weight: 800; font-size: 21px;"></i></div>
+        <img style="margin: auto;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1_umGFq06yTUm5tl7vVH7jwgvd3egZdoEwQ&s" alt="">
+       
+        <div><button class="join-btn">Join</button></div>
     </div>
 </body>
 
