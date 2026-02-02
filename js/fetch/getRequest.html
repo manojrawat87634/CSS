@@ -1,39 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
 
-        <table id="root" border="1">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Message</th>
-            </tr>
-        </table>
+<body>
     <script>
-        const getData = async ()=>{
-            const res = await fetch('https://munnapassword.pythonanywhere.com/contact/');
-            const data = await res.json();
-            console.log(data);
-            const root = document.getElementById('root')
-            data.forEach((e)=>{
-                root.innerHTML += `
-                <tr> 
-                    <td> ${e.name}</td>
-                    <td> ${e.email}</td>
-                    <td> ${e.phone}</td>
-                    <td> ${e.message}</td>
-                </tr>
-                `;
-            })
+        const getData = async () => {
+            try {
+                const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2OTgwOWIyNjcxMDEzMDk1NDEyMTcxNzUiLCJlbWFpbCI6Im1hbm9qcmF3YXQ4NzYzNEBnbWFpbC5jb20iLCJjcmVhdGVkQXQiOiIyMDI2LTAyLTAyVDEyOjQwOjA2LjExNFoiLCJ1cGRhdGVkQXQiOiIyMDI2LTAyLTAyVDEyOjQwOjA2LjExNFoiLCJfX3YiOjAsInNlc3Npb24iOiI2OTgwOWJjMGMxNjdlZDJmYjJmZGY1YWUiLCJpZCI6MSwiaWF0IjoxNzcwMDM2Njk1LCJleHAiOjE3NzAwMzY5OTV9.2iuF7C1x_8xN3xVwtN3F_ymdm5qzUW_RK9IySfojTaU";
+                const res = await fetch('http://localhost:3000/home-page/',
+                    {
+                        method : "GET",
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                              'Content-Type': 'application/json',
+                        }
+                    }
+                );
+                const data = await res.json();
+                console.log(data);
+            } catch (error) {
+                console.log(error);
+            }
+
         }
 
         getData();
     </script>
 </body>
+
 </html>
