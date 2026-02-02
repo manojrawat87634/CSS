@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<form >
+
+    <input type="text" id="name">
+    <input type="text" id="email">
+    <input type="text" id="phone">
+    <input type="text" id="message">
+    <button type="button" onclick="postData()">Submit</button>
+</form>
+
+    <table id="root" border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+        </tr>
+    </table>
+
+    
+    <script>
+
+        const postData = async()=>{
+            const data = {
+                name : document.getElementById('name').value,
+                email : document.getElementById('email').value,
+                message : document.getElementById('message').value,
+                phone : document.getElementById('phone').value,
+            }
+
+            // console.log(data);
+            await fetch('https://munnapassword.pythonanywhere.com/contact/', {
+                headers : {
+                    'content-type' : "application/json"
+                },
+                body : JSON.stringify(data),
+                method : "POST"
+            });
+            location.reload();
+        }
+        const getData = async () => {
+            const data = await fetch('https://munnapassword.pythonanywhere.com/contact/');
+            const res = await data.json();
+            res.forEach((e) => {
+                document.getElementById('root').innerHTML += `
+                <tr> 
+                    <td> ${e.name}</td>
+                    <td> ${e.email}</td>
+                    <td> ${e.phone}</td>
+                    <td> ${e.message}</td>
+                </tr>
+                `;
+            })
+        }
+
+        getData();
+    </script>
+</body>
+
+</html>
