@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        Temparuture <span id="temp"></span> <sup>*</sup>C
+        Humidity <span id="humidity"></span>
+    </div>
+    <input type="text" id="city">
+    <button onclick="getWeather()">Get Weather</button>
+
+    <script>
+        const getWeather = async ()=>{
+            const key = '731c3ed21d92e93eff6cc1c0aec0e6fc';
+            const city = document.getElementById('city').value;
+            const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`);
+            const result = await res.json();
+            console.log(result);
+            document.getElementById("temp").innerText = result.main.temp;
+            document.getElementById("humidity").innerText = result.main.humidity;
+        }
+    </script>
+</body>
+</html>
