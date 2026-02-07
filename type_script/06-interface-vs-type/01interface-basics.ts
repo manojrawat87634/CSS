@@ -1,21 +1,21 @@
 export {};
 
-// Object Types in TypeScript
+// Interface basics
 
-type User = {
+interface User {
   id: number;
   name: string;
   isActive: boolean;
-};
+}
 
-// Creating an object
+// Object using interface
 const user: User = {
   id: 1,
   name: "Manoj",
   isActive: true,
 };
 
-// Function using object type
+// Interface in function
 function printUser(user: User): void {
   console.log(user.name, user.isActive);
 }
