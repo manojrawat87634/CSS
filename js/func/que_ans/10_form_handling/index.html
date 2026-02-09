@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .err{
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="name">
+    <div id="nameerr" class="err"></div>
+    <input type="text" id="email">
+    <div id="emailerr" class="err"></div>
+    <button onclick="handleSub()">Submit</button>
+
+    <script>
+        const handleSub = ()=>{
+            const username = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            if (username == ""){
+                document.getElementById('nameerr').innerHTML = "Name Is reqired";
+            }
+            else{
+                document.getElementById('nameerr').innerHTML = "";
+            }
+            
+            
+            if (!email.includes("@")){
+                document.getElementById('emailerr').innerHTML = "Invalid Email";
+            }
+            else{
+                document.getElementById('emailerr').innerHTML = "";
+            }
+
+        }
+    </script>
+</body>
+</html>

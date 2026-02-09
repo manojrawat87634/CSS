@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, ab. Et, dolorum! Voluptatibus numquam aliquam modi magnam fuga perspiciatis debitis dolorem ipsa cumque eius! Est neque modi distinctio tenetur consequatur?
+    </p>
+    <button onclick="insertFont()">
+        Increase
+    </button>
+    <button onclick="decreaseFont()">
+        Decrease
+    </button>
+
+   
+    <script>
+        let fontSize = 16;
+        const insertFont = ()=>{
+            fontSize++;
+            document.getElementById('para').style.fontSize = `${fontSize}px`;
+        }
+        const decreaseFont = ()=>{
+            fontSize--;
+            document.getElementById('para').style.fontSize = `${fontSize}px`;
+        }
+    </script>
+</body>
+</html>
