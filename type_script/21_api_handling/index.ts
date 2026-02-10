@@ -54,7 +54,6 @@ export async function fetchUser(
   }
 }
 
-
 async function main() {
   const result = await fetchUser(1);
 
