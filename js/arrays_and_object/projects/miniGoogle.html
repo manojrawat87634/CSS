@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="search">
+    <button onclick="filterUser()">Search</button>
+    <div id="root"></div>
+    <script>
+        const users = [
+            { name: "Aarav Sharma", username: "aarav.codes", img: "https://i.pravatar.cc/150?img=12" },
+            { name: "Priya Verma", username: "priya.designs", img: "https://i.pravatar.cc/150?img=32" },
+            { name: "Rohit Mehta", username: "rohit.dev", img: "https://i.pravatar.cc/150?img=45" },
+            { name: "Sneha Kapoor", username: "sneha.uiux", img: "https://i.pravatar.cc/150?img=47" },
+            { name: "Kunal Singh", username: "kunal.builds", img: "https://i.pravatar.cc/150?img=52" },
+            { name: "Ananya Gupta", username: "ananya.creates", img: "https://i.pravatar.cc/150?img=60" },
+            { name: "Vikas Patel", username: "vikas.tech", img: "https://i.pravatar.cc/150?img=68" },
+            { name: "Neha Joshi", username: "neha.digital", img: "https://i.pravatar.cc/150?img=25" },
+            { name: "Arjun Malhotra", username: "arjun.startup", img: "https://i.pravatar.cc/150?img=18" }
+        ];
+
+        document.getElementById("root").innerHTML = ""; 
+        users.forEach((e, i)=>{
+                document.getElementById("root").innerHTML += 
+                `
+                <div> ${e.name} </div>
+            <div> ${e.username} </div>
+            <div> ${e.img} </div>
+            `;
+        })
+        const filterUser = ()=>{
+            const search = document.getElementById("search").value;
+            const filUser = users.filter((e, i)=> e.name.toLowerCase().includes(search));
+            document.getElementById("root").innerHTML = ""; 
+            filUser.forEach((e, i)=>{
+                document.getElementById("root").innerHTML += 
+                `
+            <div> ${e.name} </div>
+            <div> ${e.username} </div>
+            <div> ${e.img} </div>
+            `;
+            })
+        }
+
+    </script>
+</body>
+</html>
