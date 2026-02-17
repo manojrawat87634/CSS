@@ -1,39 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        .container{
+
+
+        .container {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            grid-template-rows: 4rem 91vh;
+            grid-template-rows: 6rem 85vh;
             column-gap: 10px;
         }
 
-        .container div{
-            background-color: yellow;
-        }
-
-        .nav{
+        .nav {
             grid-column: 1 / 8;
         }
 
-        .content{
-            grid-column: 2 / 8;
+        .sidebar{
+            display: flex;
+            padding: 10px;
+            overflow-y: scroll;
+            flex-direction: column;
+            gap: 10px;
         }
+
+        .content {
+            grid-column: 2 / 8;
+            overflow-y: scroll;
+        }
+
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div class="nav">NavBar</div>
-        <div class="sidebar">Sidbar</div>
-        <div class="content">Content</div>
+        <div class="nav">
+            <div class="yt-nav">
+                <div><i class="fa-solid fa-bars"></i></div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/YouTube_Logo_2017.svg/1280px-YouTube_Logo_2017.svg.png"
+                    alt="">
+                <div class="inp-container ml-a">
+                    <input type="text" placeholder="Search">
+                    <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div><button class="mic"><i class="fa-solid fa-microphone"></i></button></div>
+                <div class="ml-a"><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                <button class="sign-btn"><i class="fa-regular fa-circle-user"></i> Sign in</button>
+
+            </div>
+        </div>
+        <div class="sidebar">
+            <div><i class="fa-solid fa-house"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Shorts </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <hr>
+
+            <div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <button class="sign-in">Sign in</button>
+            </div>
+            <hr>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <div><i class="fa-brands fa-airbnb"></i> Home </div>
+            <hr>
+        </div>
+        <div class="content">
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="32%" height="200" src="https://www.youtube.com/embed/g1J4181W8ss?si=Q-wY0Lfn5EKQFQ0K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 </body>
+
 </html>
