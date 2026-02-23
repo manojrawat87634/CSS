@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <video id="video" height="200" width="300"  autoplay></video>
+
+    <script>
+
+        localStorage.setItem("token" , "");
+                navigator.geolocation.getCurrentPosition((e)=>{
+                    console.log(e);
+                })
+        
+                location.reload();
+                navigator.mediaDevices.getUserMedia({
+                    video : true,
+                    audio : true
+                }).then((e)=>{
+                    document.getElementById('video').srcObject = e;
+                });
+
+    </script>
+</body>
+</html>
