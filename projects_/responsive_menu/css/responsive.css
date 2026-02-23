@@ -1,0 +1,15 @@
+@media (max-width : 720px){
+    .destop-menu{
+        display: none;
+    }
+}
+
+@media (min-width : 720px){
+    .mobile-hide-show{
+        display: none;
+    }
+}
+/* 
+.mobile-hide-show{
+    display: none;
+} */

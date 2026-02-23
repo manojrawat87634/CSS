@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="css/btn.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Laptop Menu -->
+    <nav class="destop-menu text-gray">
+      <div class="nav-container">
+        <div class="logo" id="logo">fiverr <span class="green-dot"></span></div>
+      </div>
+      <div class="menus-parent-container">
+        <div class="menus-container">
+          <div>Fiverr Pro</div>
+          <div>Explore</div>
+          <div>English</div>
+          <div>Become a Seller</div>
+          <div>Sign In</div>
+          <div>
+            <button class="green-btn">Join</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Laptop Menu Ends here -->
+
+    <div class="mobile-hide-show">
+      <nav class="mobile-menu" style="z-index: -1;  width: calc(100vw - 6px);">
+        <div class="ph-nav-container" style="height: 4rem; background-color: white; box-shadow: 0 0 10px black; padding : 0px 16px 0px 16px">
+          <div>
+            <button onclick="showNavBar()"><i class="fa-solid fa-bars"></i></button>
+          </div>
+          <div>   
+             <div class="logo" id="logo">
+                fiverr <span class="green-dot"></span>
+            </div>
+        </div>
+          <div>
+            <button class="green-btn">Join</button>
+          </div>
+        </div>
+      </nav>
+
+      <div
+      id="toggle-menu"
+        style="
+          position: fixed;
+          left: -80vw;
+          width: 80vw;
+          height: 100vh;
+          overflow-y: auto;
+          background-color: rgb(251, 251, 251);
+          top: 0;
+          transition: left 0.2s ease-in, display 0.2s ease-in;
+          z-index: 10;
+        "
+      >
+        <div class="mobile-submenu" id="mobile-submenu">
+          <div class="main">
+            <button class="black-btn">Join Fiverr</button>
+          </div>
+          <div>Sign in</div>
+          <div>Browse categories</div>
+          <div>Explore</div>
+          <div>Fiverr Pro</div>
+
+          <div>Gernal</div>
+          <div>Home</div>
+          <div>English</div>
+          <div>INR</div>
+        </div>
+      </div>
+      <div
+        class="overlay"
+        id="overlay"
+        style="
+          display: none;
+          position: fixed;
+          top: 0rem;
+          width: 100vw;
+          height: calc(100vh);
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 5;
+        "
+      ></div>
+    </div>
+
+    <div style="height: 200vh;"></div>
+    <script src="js/index.js"></script>
+  </body>
+</html>

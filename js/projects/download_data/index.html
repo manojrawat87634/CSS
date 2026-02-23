@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Data Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .person-list {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .person-button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .person-button:hover {
+            background-color: #0056b3;
+        }
+
+        .person-data {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .person-data h2 {
+            margin: 0 0 10px;
+        }
+
+        .person-data p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Click on a Person to View Their Data</h1>
+<div style="display: flex; gap: 30px;">
+
+    <select id="btn-root" class="person-list" onchange="showData()">
+        
+    </select>
+    <button onclick="downloadFunc()">Download</button>
+    
+</div>
+
+
+    </div>
+
+    <div id="root">
+
+    </div>
+
+<script src="index.js"></script>
+
+</body>
+
+</html>

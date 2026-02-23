@@ -1,0 +1,37 @@
+button {
+    background: none; /* Remove default background */
+    border: none; /* Remove default border */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    font: inherit; /* Inherit font styles from parent */
+    color: inherit; /* Inherit text color */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove focus outline */
+  }
+  
+  /* Optional: Add hover effects */
+  button:hover {
+    opacity: 0.8; /* Slightly change opacity on hover */
+  }
+  
+
+
+  ::-webkit-scrollbar{
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: rgb(179, 179, 179);
+  }::-webkit-scrollbar{
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background-color: rgb(179, 179, 179);
+  }

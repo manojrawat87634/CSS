@@ -1,0 +1,83 @@
+*{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.bg-banner{
+    width: calc(100vw - 6px);
+    height: 70vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    animation: bg-img 12s infinite;
+}
+
+
+.bg-banner .lap-head{
+    margin: 30px;
+}
+
+.m-12{
+    margin: 12px;
+}
+
+.bg-banner .lap-head h1{
+    color: white;
+    font-size: 60px;
+}
+
+
+/* Serach input and button */
+.search-container > input{
+    width : 500px;
+    height:4rem;
+    padding-left: 14px;
+    font-size: larger;
+    font-size: 20px;
+    border: 2px solid gray;
+    outline: none;
+    border-start-start-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.search-container{
+    display: flex;
+}
+
+.search-container > button{
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    font-weight: larger;
+    padding: 0px 16px 0px 16px;
+    border-start-end-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+
+/* Popular Service */
+.mtb-12{
+    margin: 12px 0px 12px 0px;
+}
+
+
+
+@keyframes bg-img{
+    0%{
+        background-image: url(../Images/HeaderImages/banner1.jpg);
+        
+    }
+    33.33%{
+        background-image: url(../Images/HeaderImages/banner2.jpg);
+    }
+    66.33%{
+        background-image: url(../Images/HeaderImages/banner3.jpg);
+    }
+    100%{
+        background-image: url(../Images/HeaderImages/banner4.jpg);
+    }
+}

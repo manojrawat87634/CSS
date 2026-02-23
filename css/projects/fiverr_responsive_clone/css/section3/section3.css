@@ -1,0 +1,23 @@
+.section-3{
+    display: flex;
+    margin: 40px;
+    align-items: center;
+    /* justify-content: end; */
+}
+
+.section-content{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.section-content > div{
+    margin-top: 20px;
+    margin-bottom: 20px ;
+    /* display: flex; */
+}
+
+.sec-3img img{
+    height: 400px;
+    /* width: 300px; */
+}
